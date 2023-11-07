@@ -1,0 +1,78 @@
+.bg-oliva{
+    background-color: #749D4B; /* Verde Alga */
+}
+.bi-truck{
+    color: #ffffff; /* Letras blancas */
+    font-size: 30px;
+}
+
+.navbar-nav .nav-link.active, .nav-link, .navbar-brand{
+    color: #ffffff; /* Letras blancas */
+}
+.nav-link:hover{
+    color: #161E05; /* Letras blancas */
+}
+.navbar-collapse{
+    align-items: left;
+    justify-content: space-between;
+}
+
+.ingresar{
+    color: red;
+}
+/*Footer*/
+footer{
+    min-height: 300px;;
+}
+.footer-texto{
+    font-size: 1.5rem;
+    padding:15px;
+    margin-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.footer-logo{
+    width: 80px;
+    height: 80px;
+    margin:5px;
+}
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 2px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    transition: all 0.1 ease-in;
+}
+.iconos-redes-sociales i{
+    color:white;
+    font-size: 1.5rem;
+    transition: all 0.1 ease-in;
+
+}
+.iconos-redes-sociales a:hover{
+    background-color: white;
+    border: 2px solid #1E1604;
+}
+
+.iconos-redes-sociales a:hover i{
+    color: #1E1604;
+}
+.derechos-de-autor{
+    color: #aeaeae;
+    font-size: 15px;
+    padding: 20px;
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 768px) {
+    .navbar-brand{
+        display: none;
+    }
+}
