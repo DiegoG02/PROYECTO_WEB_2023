@@ -17,3 +17,4 @@ if (alertTrigger) {
     appendAlert('Nice, you triggered this alert message!', 'success')
   })
 }
+
