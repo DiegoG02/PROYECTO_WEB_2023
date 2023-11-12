@@ -7,7 +7,7 @@
   <!--Titulo-->
   <title>ParkingTruck</title>
   <!--FavIcon-->
-  <link rel="icon" type="image/x-icon" href="img/truck.svg" >
+  <link rel="icon" type="image/x-icon" href="img/logotruck1.svg" >
   
 
   <!--bootstrap 5.0.2 CSS-->
@@ -23,111 +23,123 @@
   
 </head>
 <body>
-    <!--BARRA DE NAVEGACIÓN-->
-    <nav class="navbar navbar-expand-md p-3 bg-oliva">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarToggler">
-                <a class="navbar-brand" href="index.html">
-                    <i class="bi bi-truck"></i>ParkingTruck
-                </a>
+  <!--BARRA DE NAVEGACIÓN-->
+  <nav class="navbar navbar-expand-md p-3 bg-oliva">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <a class="navbar-brand" href="index.html">
+          <img class="navbar-logo" src="img/logotruck1.svg" alt="Foto Truck"> PARKINGTRUCK
+        </a>
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros-sec">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reserva-sec">Reserva</a>
+          </li>
+          <li class="nav-item ingresar">
+            <a class="nav-link link-ingresar" href="html/login.html">Ingresar</a>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+  <!--FIN BARRA DE NAVEGACIÓN-->
+  <section class="hero align-items-stretch">
+    <div class="hero-principal d-flex flex-column justify-content-center">
+      <img class="hero-imagen-ds" src="img/logotruck1.svg" alt="Foto Truck">
+      <h1 class="letra-kanit-700 letra-titulo-principal">PARKINGTRUCK</h1>
+      <h2 class="letra-kanit-300">¡Estaciona con nosotros y disfruta de la tranquilidad que mereces!</h2>
+    </div><br><br>
+  </section>
 
-                <ul class="navbar-nav d-flex justify-content-center align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nosotros-sec">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="html/reserva.html">Reserva</a>
-                    </li>
-                    <li class="nav-item ingresar">
-                        <a class="nav-link link-ingresar" href="html/login.html">Ingresar</a>
-                    </li>
-                </ul> 
-            </div>
-        </div>
-    </nav>
-    <!--FIN BARRA DE NAVEGACIÓN-->
-
-    <section class="hero align-items-stretch">
-        <div class="hero-principal d-flex flex-column justify-content-center">
-          <img class="hero-imagen-ds" src="img/logotruck1.svg" alt="Foto Truck">
-          <h1 class="letra-kanit-700">PARKING TRUCK</h1>
-          <h2 class="letra-kanit-300">¡Estaciona con nosotros y disfruta de la tranquilidad que mereces!</h2>
-        </div>
-    </section>
-
-    <section>
-      <br><button type="button" class="btn btn-success align-items-center">Reserva Ya!</button><br>
-    </section>
-
-    <section id="nosotros-sec" class="seccion-oscura-2">
-      <div class="contenedor-sc">
+  <section id="nosotros-sec" class="seccion-oscura-2">
+    <div class="contenedor-sc">
+      <div class="container">
         <h2 class="letra-kanit-700">Nosotros</h2><br>
         <p class="letra-kanit-300">Somos una empresa dedicada a ofrecer servicios integrales para camiones y vehículos de carga. Nuestro compromiso es brindar soluciones eficientes y de alta calidad para satisfacer todas tus necesidades en un solo lugar.En nuestra empresa, nos enorgullece ofrecer una gama completa de servicios para camiones y vehículos de carga. Nuestro compromiso con la excelencia y la eficiencia nos impulsa a proporcionar soluciones de alta calidad que satisfacen todas tus necesidades. Ya sea que necesites un lugar seguro para estacionar tu vehículo, un restaurante para disfrutar de una comida deliciosa después de un largo viaje, o un servicio de mantenimiento confiable para mantener tu vehículo en las mejores condiciones, estamos aquí para ayudarte. Nuestro equipo de profesionales capacitados está dedicado a garantizar que recibas el mejor servicio posible.</p>
         <p class="letra-kanit-300">Nuestro objetivo es proporcionarte un servicio excepcional y hacer que tu viaje sea lo más cómodo posible. ¡Esperamos tener la oportunidad de servirte pronto!</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="experiencia seccion-clara">
-      <div class="container text-center">
-        <div class="row">
-
+  <section class="servicios seccion-clara">
+    <div class="container text-center">
+      <div class="row">
           <!--Restaurante-->
-          <div class="columna col-12 col-md-4">
-            <i class="bi bi-egg"></i>
-            <p class="experiencia-titulo">Restaurante</p>
-            <p>Ofrecemos una variedad de platos exquisitos preparados con ingredientes frescos y de alta calidad. Nuestro personal amable y nuestro ambiente acogedor te harán sentir como en casa</p>
-          </div>
-
-          <!--Parking-->
-          <div class="columna col-12 col-md-4">
-            <i class="bi bi-truck"></i>
-            <p class="experiencia-titulo">Parking</p>
-            <p>Nuestro parking está equipado con vigilancia las 24 horas y amplios espacios, garantizando la protección de tu vehículo. Además, nuestro personal está siempre disponible para ayudarte”</p>
-          </div>
-          
-          <!--Mantenimiento-->
-          <div class="columna col-12 col-md-4">
-            <i class="bi bi-gear"></i>  
-            <p class="experiencia-titulo">Mantenimiento</p>
-            <p>Ofrecemos un servicio de mantenimiento de vehículos de alta calidad. Nuestros técnicos expertos están equipados para manejar una amplia gama de servicios y reparaciones para garantizar que tu vehículo esté en las mejores condiciones.</p>
-          </div>
-
+        <div class="columna col-12 col-md-4">
+          <i class="bi bi-egg"></i>
+          <p class="servicios-titulo">Restaurante</p>
+          <p>Ofrecemos una variedad de platos exquisitos preparados con ingredientes frescos y de alta calidad. Nuestro personal amable y nuestro ambiente acogedor te harán sentir como en casa</p>
+        </div>
+        <!--Parking-->
+        <div class="columna col-12 col-md-4">
+          <i class="bi bi-truck"></i>
+          <p class="servicios-titulo">Parking</p>
+          <p>Nuestro parking está equipado con vigilancia las 24 horas y amplios espacios, garantizando la protección de tu vehículo. Además, nuestro personal está siempre disponible para ayudarte”</p>
+        </div>
+        <!--Mantenimiento-->
+        <div class="columna col-12 col-md-4">
+          <i class="bi bi-gear"></i>  
+          <p class="servicios-titulo">Mantenimiento</p>
+          <p>Ofrecemos un servicio de mantenimiento de vehículos de alta calidad. Nuestros técnicos expertos están equipados para manejar una amplia gama de servicios y reparaciones para garantizar que tu vehículo esté en las mejores condiciones.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <!--INICIO FOOTER-->
-    <footer class="bg-oliva d-flex flex-column align-items-center justify-content-center"> 
-        <i class="bi bi-truck truck-2"></i>
-        <p  class="footer-texto-logo">ParkingTruck</p>
-        <p class="footer-texto text-center">Disfruta de la verdadera comodidad</p>
-        
-        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-          <a href="https://twitter.com/ParkingTruck" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a href="https://facebook.com/ParkingTruck/" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/ParkingTruck/" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="mailto:parkingtruck@correo.com" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-envelope"></i>
-          </a>
+    
+  <section class="reserva" id="reserva-sec">
+    <div class="container reserva-div">
+      <div class="container rectangulo text-center d-flex justify-content-center-evenly"> 
+        <div class="row">
+          <div class="col-12 col-md-4 seccion-titulo letra-kanit-700">
+            ¡RESERVA CON NOSOTROS!
+          </div>
+          <div class="col-12 col-md-4 descripcion">
+            ¡Reserva tu espacio de estacionamiento ahora! Nuestro parking está equipado con vigilancia las 24 horas y amplios espacios, garantizando la protección de tu vehículo. Además, nuestro personal está siempre disponible para ayudarte.
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="html/login.html">
+              <button type="button" class="btn btn-oliva letra-kanit-700 align-items-center">RESERVA YA!</button>
+            </a>
+          </div>
         </div>
-        <div class="derechos-de-autor">© 2023 ParkingTruck | Todos los derechos reservados</div>
-      </footer>
-    <!--FIN FOOTER-->
+      </div>
+    </div>
+  </section>
 
-    <!--bootstrap 5.0.2 JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <!--INICIO FOOTER-->
+  <footer class="bg-oliva d-flex flex-column align-items-center justify-content-center"> 
+      <img class="truck-2" src="img/logotruck1.svg" alt="Foto Truck">
+      <p  class="footer-texto-logo letra-kanit-700">ParkingTruck</p>
+      <p class="footer-texto text-center">Disfruta de la verdadera comodidad</p>
+      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+        <a href="https://twitter.com/ParkingTruck" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="https://facebook.com/ParkingTruck/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/ParkingTruck/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="mailto:parkingtruck@correo.com" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+      <div class="derechos-de-autor">© 2023 ParkingTruck | Todos los derechos reservados</div>
+  </footer>
+  <!--FIN FOOTER-->
+
+  <!--bootstrap 5.0.2 JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
