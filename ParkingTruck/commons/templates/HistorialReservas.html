@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block extrahead %} 
+<link rel="stylesheet" href="{% static '/css/index.css' %}">
+<link rel="icon" type="image/x-icon" href="{% static '/img/logotruck1.svg' %}" >
+<title>Historial de Reservas - ParkingTruck</title>
+{% endblock extrahead%}
+
+{% block content %}
+  <h2>Historial de Reservas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha de Llegada</th>
+        <th>Matrícula del Vehículo</th>
+        <th>Tiempo Requerido</th>
+        <th>Restaurante</th>
+        <th>Mantenimiento</th>
+        <th>Fecha de Creación</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for reserva in reservas %}
+        <tr>
+          <td>{{ reserva.fecha_llegada }}</td>
+          <td>{{ reserva.matricula_vehiculo }}</td>
+          <td>{{ reserva.tiempo_requerido }}</td>
+          <td>{{ "Sí" if reserva.necesita_restaurante else "No" }}</td>
+          <td>{{ "Sí" if reserva.necesita_mantenimiento else "No" }}</td>
+          <td>{{ reserva.fecha_creacion }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

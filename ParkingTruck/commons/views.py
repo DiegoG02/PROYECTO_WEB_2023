@@ -2,10 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from .forms import LoginForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .forms import RegistroForm
+from .forms import *
+from .models import Reserva
 
 
 def profile_view(request):
@@ -13,6 +14,7 @@ def profile_view(request):
     return render(request, 'account/profile.html')  # Ajusta la plantilla según tus necesidades
 
 def registro_view(request):
+    logout(request)
     if request.method == 'POST':
         form = RegistroForm(request.POST)
         if form.is_valid():
@@ -28,6 +30,8 @@ def registro_view(request):
             new_user = User.objects.create_user(username=username, password=password)
             new_user.email = email
             new_user.first_name = nombre
+            new_user.last_name = nombre
+            new_user.date_joined = fecha_nacimiento
             # Ajusta otras propiedades del usuario según sea necesario
 
             new_user.save()
@@ -43,6 +47,7 @@ def registro_view(request):
     return render(request, 'account/registro.html', {'form': form})
 
 def user_login(request):
+    logout(request)
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -53,7 +58,9 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('Usuario autenticado')
+                    template = loader.get_template('reserva.html')
+                    context = {}
+                    return HttpResponse(template.render(context, request))
                 else:
                     return HttpResponse('El usuario no esta activo')
             else:
@@ -63,6 +70,29 @@ def user_login(request):
         return render(request, 'account/login.html', {'form': form})
 
 def index(request):
+    logout(request)
     template = loader.get_template('index.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+def logout_view(request):
+    logout(request)
+    request.session.flush()
+    return redirect('index')  # Cambia 'index' por la URL a la que deseas redirigir al usuario después de cerrar sesión
+
+def reserva_view(request):
+    template = loader.get_template('reserva.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def reservar_estacionamiento(request):
+    form = ReservaForm()
+
+    return render(request, 'reserva.html', {'form': form})
+
+@login_required
+def historial_reservas(request):
+    reservas = Reserva.objects.filter(usuario=request.user, estado='completada')
+    form = HistorialReservasForm()
+
+    return render(request, 'HistorialReservas.html', {'reservas': reservas, 'form': form})
