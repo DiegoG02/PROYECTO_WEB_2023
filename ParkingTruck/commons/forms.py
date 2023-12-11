@@ -21,6 +21,7 @@ class ReservaForm(forms.ModelForm):
         fields = ['fecha_llegada', 'matricula_vehiculo', 'tiempo_requerido', 'necesita_restaurante', 'necesita_mantenimiento']
         widgets = {
             'fecha_llegada': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'hora_llegada': forms.TimeInput(attrs={'class': 'form-control', 'type': 'time'}), # 'readonly': True}),
             'matricula_vehiculo': forms.TextInput(attrs={'class': 'form-control'}),
             'tiempo_requerido': forms.NumberInput(attrs={'class': 'form-control'}),
             'necesita_restaurante': forms.CheckboxInput(attrs={'class': 'form-check-input'}),

@@ -33,8 +33,11 @@
           {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="#" id="userDropdown" role="button" onclick="toggleDropdown()">
-                Bienvenido {{ user.first_name }}
+                Bienvenido: {{ user.first_name }}  |         
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'reserva' %}">   Reservar</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'historial' %}">Mis reservas</a>

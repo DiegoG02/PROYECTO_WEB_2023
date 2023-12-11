@@ -15,22 +15,22 @@
         <h2 class="text-center p-3 letra-kanit-700">Reservar Estacionamiento</h2>
         <div class="formulario letra-kanit-700">
           <label for="{{ form.fecha_llegada.id_for_label }}">Fecha de Llegada:</label>
-          <input type="date" class="form-control" name="{{ form.fecha_llegada.name }}" id="{{ form.fecha_llegada.id_for_label }}">
+          <input type="date" class="form-control" name="fecha_llegada" id="{{ form.fecha_llegada.id_for_label }}">
           <br>
           <label for="{{ form.hora_llegada.id_for_label }}">Hora de Llegada:</label>
-          <input type="time" class="form-control" name="{{ form.hora_llegada.name }}" id="{{ form.hora_llegada.id_for_label }}">
+          <input type="time" class="form-control" name="hora_llegada" id="{{ form.hora_llegada.id_for_label }}">
           <br>
           <label for="{{ form.matricula.id_for_label }}">Matrícula del Vehículo:</label>
-          <input type="text" class="form-control" name="{{ form.matricula.name }}" id="{{ form.matricula.id_for_label }}">
+          <input type="text" class="form-control" name="matricula_vehiculo" id="{{ form.matricula.id_for_label }}">
           <br>
           <label for="{{ form.tiempo_requerido.id_for_label }}">Tiempo Requerido (en horas):</label>
-          <input type="number" class="form-control" name="{{ form.tiempo_requerido.name }}" id="{{ form.tiempo_requerido.id_for_label }}">
+          <input type="number" class="form-control" name="tiempo_requerido" id="{{ form.tiempo_requerido.id_for_label }}">
           <br>
           <label for="{{ form.servicio_restaurante.id_for_label }}">¿Necesita Servicio de Restaurante?</label>
-          <input type="checkbox" class="form-check-input" name="{{ form.servicio_restaurante.name }}" id="{{ form.servicio_restaurante.id_for_label }}">
+          <input type="checkbox" class="form-check-input" name="servicio_restaurante" id="{{ form.servicio_restaurante.id_for_label }}">
           <br>
           <label for="{{ form.servicio_mantenimiento.id_for_label }}">¿Necesita Servicio de Mantenimiento?</label>
-          <input type="checkbox" class="form-check-input" name="{{ form.servicio_mantenimiento.name }}" id="{{ form.servicio_mantenimiento.id_for_label }}">
+          <input type="checkbox" class="form-check-input" name="servicio_mantenimiento" id="{{ form.servicio_mantenimiento.id_for_label }}">
         </div>
         <button type="submit" class="btn btn-oliva letra-kanit-700">Reservar</button>
       </section>

@@ -7,7 +7,7 @@ urlpatterns = [
     path('accounts/profile/', profile_view, name='profile'), 
     path('registro/', registro_view, name='registro'),
     path('accounts/profile/', profile_view, name='profile'),
-    path('reserva/', reserva_view, name='reserva'),
+    path('reserva/', crear_reserva, name='reserva'),
     path('historial/', historial_reservas, name='historial'),
     path('', index, name='index'),  
 

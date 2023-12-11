@@ -7,29 +7,35 @@
 {% endblock extrahead%}
 
 {% block content %}
-  <h2>Historial de Reservas</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Fecha de Llegada</th>
-        <th>Matrícula del Vehículo</th>
-        <th>Tiempo Requerido</th>
-        <th>Restaurante</th>
-        <th>Mantenimiento</th>
-        <th>Fecha de Creación</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for reserva in reservas %}
+<div class="container mt-4">
+  <h2 class="text-center p-3 letra-kanit-700">Historial de Reservas</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered text-center">
+      <thead>
         <tr>
-          <td>{{ reserva.fecha_llegada }}</td>
-          <td>{{ reserva.matricula_vehiculo }}</td>
-          <td>{{ reserva.tiempo_requerido }}</td>
-          <td>{{ "Sí" if reserva.necesita_restaurante else "No" }}</td>
-          <td>{{ "Sí" if reserva.necesita_mantenimiento else "No" }}</td>
-          <td>{{ reserva.fecha_creacion }}</td>
+          <th class="letra-kanit-300">Fecha de Llegada</th>
+          <th class="letra-kanit-300">Hora de Llegada</th>
+          <th class="letra-kanit-300">Matrícula del Vehículo</th>
+          <th class="letra-kanit-300">Tiempo Requerido</th>
+          <th class="letra-kanit-300">Restaurante</th>
+          <th class="letra-kanit-300">Mantenimiento</th>
+          <th class="letra-kanit-300">Fecha de Creación</th>
         </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {% for reserva in reservas %}
+          <tr>
+            <td>{{ reserva.fecha_llegada|date:"d/m/Y" }}</td>
+            <td>{{ reserva.hora_llegada|time:"H:i:s" }}</td>
+            <td>{{ reserva.matricula_vehiculo }}</td>
+            <td>{{ reserva.tiempo_requerido }} horas</td>
+            <td>{{reserva.necesita_restaurante}}</td>
+            <td>{{reserva.necesita_mantenimiento}}</td>
+            <td>{{ reserva.fecha_creacion|date:"d/m/Y H:i:s" }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 {% endblock %}

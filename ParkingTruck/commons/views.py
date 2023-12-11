@@ -80,13 +80,21 @@ def logout_view(request):
     request.session.flush()
     return redirect('index')  # Cambia 'index' por la URL a la que deseas redirigir al usuario después de cerrar sesión
 
-def reserva_view(request):
-    template = loader.get_template('reserva.html')
-    context = {}
-    return HttpResponse(template.render(context, request))
-
-def reservar_estacionamiento(request):
-    form = ReservaForm()
+@login_required  # Agrega esta decoración si deseas que solo usuarios autenticados puedan acceder a esta vista
+def crear_reserva(request):
+    if request.method == 'POST':
+        form = ReservaForm(request.POST)
+        if form.is_valid():
+            reserva = form.save(commit=False)
+            reserva.usuario = request.user 
+            reserva.fecha_llegada = form.cleaned_data['fecha_llegada']
+            reserva.necesita_restaurante = form.cleaned_data['necesita_restaurante']
+            reserva.necesita_mantenimiento = form.cleaned_data['necesita_mantenimiento']
+            reserva.estado = 'completada'
+            reserva.save()
+            return redirect('historial')
+    else:
+        form = ReservaForm()
 
     return render(request, 'reserva.html', {'form': form})
 

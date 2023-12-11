@@ -9,6 +9,7 @@ class Reserva(models.Model):
 
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     fecha_llegada = models.DateTimeField()
+    hora_llegada = models.TimeField(default='00:00:00')
     matricula_vehiculo = models.CharField(max_length=50)
     tiempo_requerido = models.CharField(max_length=50)
     necesita_restaurante = models.BooleanField(default=False)
